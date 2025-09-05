@@ -20,10 +20,10 @@ const TodoList = ({task,handleDelete,id}) => {
             <button onClick={handleCheck}>
                 {
                     checked ?
-                    <FaRegCheckCircle size={20} className='text-green-600'/>
+                    <FaRegCheckCircle size={25} className='text-green-600'/>
                     
                     :
-                    <FaRegCircle size={20}/>
+                    <FaRegCircle size={25}/>
                     
                 }
             </button>

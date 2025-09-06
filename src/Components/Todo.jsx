@@ -42,12 +42,9 @@ const Todo = () => {
           <div key={index} className='ml-4'>
         <TodoList task={task} id={task.id}  handleDelete={deleteHandle}/>            
     </div>
+
         ))
         }
-  
-
-
-
     </div>
 )
 }

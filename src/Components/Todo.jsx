@@ -27,7 +27,9 @@ const Todo = () => {
       setData((prev)=>{
         return prev.filter((todo)=>todo.id !== id)
       })
-    }
+
+  }
+
   return (
     <div className='bg-white shadow-lg rounded place-self-center  w-11/12 max-w-md flex flex-col min-h-[500px] p-7 '>
     <h1 className='text-3xl font-bold text-center pb-4'>📃Todo List</h1>
@@ -40,7 +42,7 @@ const Todo = () => {
     
         {Data.map((task,index)=>(
           <div key={index} className='ml-4'>
-        <TodoList task={task} id={task.id}  handleDelete={deleteHandle}/>            
+        <TodoList task={task} id={task.id} handleChange={handleChange}  handleDelete={deleteHandle}/>            
     </div>
 
         ))

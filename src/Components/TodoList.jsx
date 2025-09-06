@@ -3,6 +3,7 @@ import { FaRegCircle } from "react-icons/fa";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { GrDocumentUpdate } from "react-icons/gr";
+import Modal from 'react-modal';
 
 
 
@@ -12,6 +13,7 @@ const TodoList = ({task,handleDelete,id}) => {
         setChecked(!checked);
     }
 
+    const [openModal ,setOpenModal]=useState(false);
    
   return (
     <div className='flex items-center gap-4 my-2 justify-between'>
@@ -35,6 +37,11 @@ const TodoList = ({task,handleDelete,id}) => {
         <button onClick={()=>handleDelete(id)} className={`${checked ? 'bg-red-600 px-2 py-1  rounded text-white flex items-center': 'bg-red-600 px-2 py-1 rounded text-white flex items-center'}`} ><MdDelete/>  </button>
         <button  className={`${checked ? 'bg-green-600 px-2 py-1  rounded text-white flex items-center': 'bg-green-600 px-2 py-1 rounded text-white flex items-center'}`} ><GrDocumentUpdate /> </button>
         </div>
+
+
+      <Modal isOpen={true}>
+
+      </Modal>
 </div>
   )
 }
